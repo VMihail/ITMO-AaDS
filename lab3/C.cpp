@@ -103,7 +103,7 @@ private:
         cin >> a[i];
         b[i] = a[i];
       }
-      sort(b.begin(), b.end());
+      sort(b.begin() + 1, b.end());
       vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
       vector<vector<pair<int, int>>> way(n + 1, vector<pair<int, int>>(m + 1));
       // if a[i] == b[j] -> dp[i][j] = dp[i - 1][j - 1] + 1
